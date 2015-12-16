@@ -31,7 +31,13 @@ Results can be observed in 2jobs_comments. The experiment was the following:
 
 Jobs are called in the context of Spark
 ```
-./bin/spark-submit --class org.apache.spark.examples.SparkPi     --master yarn-cluster       --driver-memory 2g     --executor-memory 1g     --executor-cores 1  --conf spark.shuffle.service.enabled=true --conf spark.dynamicAllocation.enabled=true --conf spark.dynamicAllocation.minExecutors=1 --conf spark.dynamicAllocation.maxExecutors=40 --queue qf1   lib/spark-examples*.jar     1000000
+./bin/spark-submit --class org.apache.spark.examples.SparkPi     --master yarn-cluster       --driver-memory 2g  \
+   --executor-memory 1g     --executor-cores 1  --conf spark.shuffle.service.enabled=true --conf spark.dynamicAllocation.enabled=true \
+   --conf spark.dynamicAllocation.minExecutors=1 --conf spark.dynamicAllocation.maxExecutors=40 --queue qf1   lib/spark-examples*.jar \
+   1000000
 
-./bin/spark-submit --class org.apache.spark.examples.SparkPi     --master yarn-cluster       --driver-memory 2g     --executor-memory 1g     --executor-cores 1  --conf spark.shuffle.service.enabled=true --conf spark.dynamicAllocation.enabled=true --conf spark.dynamicAllocation.minExecutors=1 --conf spark.dynamicAllocation.maxExecutors=40 --queue qf2   lib/spark-examples*.jar     1000000
+./bin/spark-submit --class org.apache.spark.examples.SparkPi     --master yarn-cluster       --driver-memory 2g  \
+   --executor-memory 1g     --executor-cores 1  --conf spark.shuffle.service.enabled=true --conf spark.dynamicAllocation.enabled=true \
+   --conf spark.dynamicAllocation.minExecutors=1 --conf spark.dynamicAllocation.maxExecutors=40 --queue qf2   lib/spark-examples*.jar \
+   1000000
 ```
