@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<allocations>
+  <queue name="qf1">
+    <maxResources>35000 mb, 30 vcores</maxResources>
+    <weight>2.0</weight>
+    <schedulingPolicy>fair</schedulingPolicy>
+  <fairSharePreemptionThreshold>1.0</fairSharePreemptionThreshold>
+  <fairSharePreemptionTimeout>20</fairSharePreemptionTimeout>
+  <minSharePreemptionTimeout>20</minSharePreemptionTimeout>
+  </queue>
+  <queue name="qf2">
+    <maxResources>35000 mb, 30 vcores</maxResources>
+    <weight>2.0</weight>
+    <schedulingPolicy>fair</schedulingPolicy>
+    <fairSharePreemptionThreshold>1.0</fairSharePreemptionThreshold>
+    <fairSharePreemptionTimeout>20</fairSharePreemptionTimeout>
+    <minSharePreemptionTimeout>20</minSharePreemptionTimeout>
+  </queue>
+</allocations>
