@@ -28,7 +28,6 @@ Results can be observed in 2jobs_comments. The experiment was the following:
     - 15:08 Job1 starts (left), it can only create one executor with the remaining resources.
     - 15:07, 15:08, 15:09: Yarn takes a few containers from Job2.
     - 15:09: Job1 receives containers and creates three executors on then.
-    - 
 Jobs are called in the context of Spark
 ./bin/spark-submit --class org.apache.spark.examples.SparkPi     --master yarn-cluster       --driver-memory 2g     --executor-memory 1g     --executor-cores 1  --conf spark.shuffle.service.enabled=true --conf spark.dynamicAllocation.enabled=true --conf spark.dynamicAllocation.minExecutors=1 --conf spark.dynamicAllocation.maxExecutors=40 --queue qf1   lib/spark-examples*.jar     1000000
 
