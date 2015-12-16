@@ -16,7 +16,7 @@ Yarn is configueed
 - Preemption of containers enabled.
 
 ## Experiment description
-Results can be observed in 2jobs_comments. The experiment was the following:
+Results can be observed in 2jobs_comments.png. The experiment was the following:
 - Yarn cluster with FAIR scheduler. 1 management node, 4 compute nodes, each one with 10GB RAM, 8 vCores available for work.
 - Scheduling policies:
     - two queues (qf1, qf2), both configured with a fair-share of 0.5.
