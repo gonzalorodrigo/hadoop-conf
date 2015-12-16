@@ -1,7 +1,22 @@
 # hadoop-conf
+## Introduction
+This repo contains the configuration files for Yarn (hadoop 2) to test dynamic allocation of resources in Yarn+Spark:
+- Jobs are given resources.
+- Jobs resources are stolen.
 
+Versions used:
+- Hadoop: 2.7.1 
+- Spark: 1.5.2 binary with Yarn support.
+- Java: 1.7.0_45
+ 
+Yarn is configueed
+- Using the SPARK external suffler.
+- Using Fair scheduler.
+- Two queues, 50% of the share each.
+- Preemption of containers enabled.
 
-The experiment was the following:
+## Experiment description
+Results can be observed in 2jobs_comments. The experiment was the following:
 - Yarn cluster with FAIR scheduler. 1 management node, 4 compute nodes, each one with 10GB RAM, 8 vCores available for work.
 - Scheduling policies:
     - two queues (qf1, qf2), both configured with a fair-share of 0.5.
